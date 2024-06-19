@@ -1,1 +1,1 @@
-======================== documentation config nework project on gns3 ========================
+======================== documentation config network project on gns3 ========================
