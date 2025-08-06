@@ -29,6 +29,6 @@
 
 ---
 
-## Documentation Link
+## Link
 
 [https://github.com/andre4freelance/gns3/tree/main/H3C-vBRAS-BRAS-BNG](https://github.com/andre4freelance/gns3/tree/main/H3C-vBRAS-BRAS-BNG)
