@@ -31,10 +31,8 @@ set interfaces ge-0/0/1 unit 0 description JUNIPER-3-ge-0/0/1
 set interfaces ge-0/0/1 unit 0 family inet address 10.0.0.9/30
 set interfaces ge-0/0/1 unit 0 family mpls
 set interfaces ge-0/0/2 description RO-SITE-A
-set interfaces em1 unit 0 family inet address 169.254.0.2/24
 set interfaces lo0 unit 0 family inet address 10.20.20.20/32
 set interfaces lo0 unit 0 family mpls
-set forwarding-options storm-control-profiles default all
 set routing-options router-id 10.20.20.20
 set protocols ospf area 0.0.0.0 interface ge-0/0/0.0
 set protocols ospf area 0.0.0.0 interface ge-0/0/1.0
@@ -59,10 +57,8 @@ set interfaces ge-0/0/0 unit 0 family mpls
 set interfaces ge-0/0/1 unit 0 description JUNIPER-2-ge-0/0/1
 set interfaces ge-0/0/1 unit 0 family inet address 10.0.0.10/30
 set interfaces ge-0/0/1 unit 0 family mpls
-set interfaces em1 unit 0 family inet address 169.254.0.2/24
 set interfaces lo0 unit 0 family inet address 10.30.30.30/32
 set interfaces lo0 unit 0 family mpls
-set forwarding-options storm-control-profiles default all
 set routing-options router-id 10.30.30.30
 set protocols ospf area 0.0.0.0 interface ge-0/0/0.0
 set protocols ospf area 0.0.0.0 interface ge-0/0/1.0
