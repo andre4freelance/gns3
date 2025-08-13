@@ -1,0 +1,81 @@
+JUNIPER-1
+set interfaces xe-0/0/0 description SW-2-xe-0/0/0
+set interfaces xe-0/0/0 unit 0 family inet address 10.0.0.1/30
+set interfaces xe-0/0/0 unit 0 family mpls
+set interfaces xe-0/0/1 description SW-3-xe-0/0/0
+set interfaces xe-0/0/1 unit 0 family inet address 10.0.0.5/30
+set interfaces xe-0/0/1 unit 0 family mpls
+set interfaces lo0 unit 0 family inet address 10.10.10.10/32
+set interfaces lo0 unit 0 family mpls
+set routing-options router-id 10.10.10.10
+set protocols ospf area 0.0.0.0 interface xe-0/0/0.0
+set protocols ospf area 0.0.0.0 interface xe-0/0/1.0
+set protocols ospf area 0.0.0.0 interface lo0.0 passive
+set protocols bgp group VPLS type internal
+set protocols bgp group VPLS local-address 10.10.10.10
+set protocols bgp group VPLS local-as 64512
+set protocols bgp group VPLS neighbor 10.30.30.30 family l2vpn signaling
+set protocols bgp group VPLS neighbor 10.20.20.20 family l2vpn signaling
+set protocols ldp interface xe-0/0/0.0
+set protocols ldp interface xe-0/0/1.0
+set protocols ldp interface lo0.0
+set protocols mpls interface xe-0/0/0.0
+set protocols mpls interface xe-0/0/1.0
+set protocols mpls interface lo0.0
+
+JUNIPER-2
+set interfaces xe-1/0/0 unit 0 description SW-1-xe-0/0/0
+set interfaces xe-1/0/0 unit 0 family inet address 10.0.0.2/30
+set interfaces xe-1/0/0 unit 0 family mpls
+set interfaces xe-1/0/1 unit 0 description SW-3-xe-0/0/1
+set interfaces xe-1/0/1 unit 0 family inet address 10.0.0.9/30
+set interfaces xe-1/0/1 unit 0 family mpls
+set interfaces xe-1/0/2 description RO-SITE-A
+set interfaces em1 unit 0 family inet address 169.254.0.2/24
+set interfaces lo0 unit 0 family inet address 10.20.20.20/32
+set interfaces lo0 unit 0 family mpls
+set forwarding-options storm-control-profiles default all
+set routing-options router-id 10.20.20.20
+set protocols ospf area 0.0.0.0 interface xe-1/0/0.0
+set protocols ospf area 0.0.0.0 interface xe-1/0/1.0
+set protocols ospf area 0.0.0.0 interface lo0.0 passive
+set protocols bgp group VPLS type internal
+set protocols bgp group VPLS local-address 10.20.20.20
+set protocols bgp group VPLS local-as 64512
+set protocols bgp group VPLS neighbor 10.10.10.10 family l2vpn signaling
+set protocols bgp group VPLS neighbor 10.30.30.30 family l2vpn signaling
+set protocols ldp interface xe-1/0/0.0
+set protocols ldp interface xe-1/0/1.0
+set protocols ldp interface lo0.0
+set protocols mpls interface xe-1/0/0.0
+set protocols mpls interface xe-1/0/1.0
+set protocols mpls interface lo0.0
+
+
+JUNIPER-3
+set interfaces xe-1/0/0 unit 0 description SW-1-xe-0/0/1
+set interfaces xe-1/0/0 unit 0 family inet address 10.0.0.6/30
+set interfaces xe-1/0/0 unit 0 family mpls
+set interfaces xe-1/0/1 unit 0 description SW-2-xe-0/0/1
+set interfaces xe-1/0/1 unit 0 family inet address 10.0.0.10/30
+set interfaces xe-1/0/1 unit 0 family mpls
+set interfaces em1 unit 0 family inet address 169.254.0.2/24
+set interfaces lo0 unit 0 family inet address 10.30.30.30/32
+set interfaces lo0 unit 0 family mpls
+set forwarding-options storm-control-profiles default all
+set routing-options router-id 10.30.30.30
+set protocols ospf area 0.0.0.0 interface xe-1/0/0.0
+set protocols ospf area 0.0.0.0 interface xe-1/0/1.0
+set protocols ospf area 0.0.0.0 interface lo0.0 passive
+set protocols bgp group VPLS type internal
+set protocols bgp group VPLS local-address 10.30.30.30
+set protocols bgp group VPLS local-as 64512
+set protocols bgp group VPLS neighbor 10.10.10.10 family l2vpn signaling
+set protocols bgp group VPLS neighbor 10.20.20.20 family l2vpn signaling
+set protocols ldp interface xe-1/0/0.0
+set protocols ldp interface xe-1/0/1.0
+set protocols ldp interface lo0.0
+set protocols mpls interface xe-1/0/0.0
+set protocols mpls interface xe-1/0/1.0
+set protocols mpls interface lo0.0
+
