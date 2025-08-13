@@ -11,7 +11,7 @@
 ![VPLS, BGP, MPLS, and LDP Status](images/2.VPLS-status.png)
 
 #### PING from RO-SITE-A to RO-SITE-B
-![PING from RO-SITE-A to RO-SITE-B](images/3.ping-from-SITE-A-to-SITE-B)
+![PING from RO-SITE-A to RO-SITE-B](images/3.ping-from-SITE-A-to-SITE-B.png)
 
 ---
 
