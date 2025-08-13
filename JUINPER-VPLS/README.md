@@ -17,12 +17,11 @@
 
 ## Devices
 
-- **BRAS-BNG**: H3C vBRAS1000  
-- **BGP Router**: Juniper vMX-v14.1R1.10  
-- **Client and 8.8.8.8**: MikroTik RouterOS 7.14.3  
+- **RO**: MikroTik RouterOS 7.14.3
+- **JUNIPER**: Juniper vMX-v14.1R1.10  
 
 ---
 
 ## Link
 
-[https://github.com/andre4freelance/gns3/tree/main/H3C-vBRAS-BRAS-BNG](https://github.com/andre4freelance/gns3/tree/main/H3C-vBRAS-BRAS-BNG)
+[https://github.com/andre4freelance/gns3/tree/main/JUINPER-VPLS](https://github.com/andre4freelance/gns3/tree/main/JUINPER-VPLS)
